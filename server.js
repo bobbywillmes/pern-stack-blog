@@ -2,7 +2,10 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 5000;
 const pool = require('./config/db'); // Import the database connection
+const cors = require('cors');
+
 app.use(express.json());
+app.use(cors());
 
 // Get all posts
 app.get('/posts', async (req, res) => {

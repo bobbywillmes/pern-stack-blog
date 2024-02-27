@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import './App.scss';
+import PostList from './components/postlist/PostList';
 
 function App() {
     const [message, setMessage] = useState('');
@@ -14,9 +15,12 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <p>Message from backend:</p>
                 <p>{message}</p>
             </header>
+            <div>
+                <h1>My blog</h1>
+                <PostList />
+            </div>
         </div>
     );
 }
