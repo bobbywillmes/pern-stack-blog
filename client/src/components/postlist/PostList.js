@@ -1,33 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import Post from '../post/Post';
+import PostListItem from '../postListItem/PostListItem';
 
-const PostList = () => {
+const PostList = (props) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios({
-        method: 'get',
-        url: 'http://localhost:5000/posts',
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-type': 'application/json'
-        }
-    })
-      .then(response => {
-        console.log(response);
-        setPosts(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching posts:', error);
-      });
+    if(props.posts) {
+      setPosts(props.posts);
+    }
   }, []);
 
+  useEffect(() => {
+    setPosts(props.posts);
+  }, [props.posts])
+
   return (
-    <div>
-        <h2>PostList</h2>
-      {posts.map(post => (
-        <Post key={post.id} post={post} />
+    <div id="posts">
+      {posts.map((post, index) => (
+        <PostListItem
+          key={post.id}
+          post={post}
+          index={index}
+          handlePostDelete={props.handlePostDelete}
+          handlePostUpdate={props.handlePostUpdate}
+         />
       ))}
     </div>
   );

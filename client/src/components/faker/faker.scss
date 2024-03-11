@@ -1,0 +1,121 @@
+.section {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+#faker {
+  border: 2px dashed green;
+  padding: 1rem;
+
+  blockquote {
+    background-color: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 0;
+    padding: 0.5em 10px;
+
+    footer {
+      border-left: 5px solid #ff8254;
+      padding-left: 10px;
+      color: #333;
+    }
+  }
+}
+
+#people {
+  overflow-y: clip;
+    th[scope="col"] {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    th[scope="row"] {
+        color: #ccc;
+        user-select: none;
+    }
+    #people:hover {
+      background: #00ffff;
+    }
+    div.table-responsive {
+      height: 450px;
+    }
+}
+#dogs {
+  overflow-y: clip;
+  ul.list-group {
+    height: 450px;
+    overflow-y: scroll;
+  }
+}
+
+#people table {
+    thead {
+        top: 0;
+        position: sticky;
+    }
+    tr:hover {
+        background: #aff !important;
+    }
+    .table-responsive thead, .table-responsive tbody {
+        display: block;
+      }
+      .table-responsive tbody {
+        // max-height: 400px; /* Set max-height you desire */
+        overflow-y: auto;  /* Enable vertical scrolling */
+      }
+      .table-responsive thead tr {
+        /* To ensure the header cells have the same width as body cells */
+        display: flex;
+      }
+      .table-responsive thead th {
+        flex: 1;
+        /* Add other styles here to match thead and tbody cell alignment */
+      }
+      .table-responsive tbody tr {
+        display: flex;
+      }
+      .table-responsive tbody td {
+        flex: 1;
+        /* Add other styles here to match thead and tbody cell alignment */
+      }
+}
+
+.section {
+  border: 2px dotted red;
+}
+
+#colors {
+  .color {
+    position: relative;
+    margin: 0;
+    padding: 0.2rem;
+    h4 {
+      text-align: center;
+    }
+    .count {
+      position: absolute;
+      top: 0;
+      left: 1rem;
+      user-select: none;
+    }
+  }
+}
+
+#hacker-log {
+    border: 1px dashed dodgerblue;
+    padding: 10px;
+    margin-bottom: 20px;
+
+  .log-entry {
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+      p {
+        margin-left: 1rem;
+      }
+  }
+  .log-entry:nth-child(odd) {
+    background: #f2f2f2;
+  }
+
+  .log-entry:last-child {
+      border-bottom: none;
+  }
+}

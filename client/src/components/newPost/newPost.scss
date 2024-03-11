@@ -1,0 +1,36 @@
+#newPost {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .form-label {
+    font-weight: bold;
+  }
+
+  .form-control {
+    border-radius: 5px;
+    border: 2px solid #ced4da;
+  }
+
+  textarea.form-control {
+    resize: vertical; /* Allow vertical resizing of the textarea */
+  }
+
+  .invalid {
+    border: 2px solid red !important;
+  }
+
+  #loremBtn {
+    background: hsla(158, 100%, 50%, 0.2);
+    position: absolute;
+    right: 1rem;
+  }
+  #loremBtn:hover {
+    background: hsla(158, 100%, 50%, 0.8);;
+  }
+
+}
